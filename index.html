@@ -1,0 +1,1020 @@
+<title>अक्षर Hindi Language</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700&family=Noto+Sans+Devanagari:wght@400;600&family=Tiro+Devanagari+Sanskrit&display=swap">
+<style>
+/* Layout: neel (indigo) ink on cool paper, one marigold accent. Login is a two-column spread, the playground is an editor beside its output, both stack on phones. */
+:root {
+  --bg: #EEF1F8;
+  --surface: #FFFFFF;
+  --ink: #1A1F45;
+  --muted: #5A6088;
+  --line: #CCD3E6;
+  --indigo: #3539A8;
+  --accent: #F2A51A;
+  --accent-ink: #2B1B00;
+  --code-bg: #151A3A;
+  --code-fg: #E9ECFA;
+  --code-muted: #8990BD;
+  --code-key: #FFC457;
+  --code-str: #9FE0C0;
+  --danger: #B3261E;
+  --danger-on-code: #FF9A90;
+  --font-display: "Tiro Devanagari Sanskrit", "Noto Serif Devanagari", Georgia, serif;
+  --font-body: "Mukta", "Noto Sans Devanagari", system-ui, sans-serif;
+  --font-code: "Noto Sans Devanagari", "Mukta", ui-monospace, monospace;
+  --radius: 10px;
+  --line-code: 1.75rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1126; --surface: #171B38; --ink: #E9ECFA; --muted: #9AA1C7; --line: #2B3160;
+    --indigo: #A3A8FF; --accent: #F2A51A; --accent-ink: #2B1B00;
+    --code-bg: #090B1B; --code-fg: #E9ECFA; --code-muted: #7C83B0; --code-key: #FFC457; --code-str: #9FE0C0;
+    --danger: #FF9A90; --danger-on-code: #FF9A90;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1126; --surface: #171B38; --ink: #E9ECFA; --muted: #9AA1C7; --line: #2B3160;
+  --indigo: #A3A8FF; --accent: #F2A51A; --accent-ink: #2B1B00;
+  --code-bg: #090B1B; --code-fg: #E9ECFA; --code-muted: #7C83B0; --code-key: #FFC457; --code-str: #9FE0C0;
+  --danger: #FF9A90; --danger-on-code: #FF9A90;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.6; }
+.wrap { max-width: 68rem; margin: 0 auto; padding-block: 2rem 3rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; text-wrap: balance; margin: 0; line-height: 1.35; }
+p { margin: 0; }
+button, input, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.brand { font-size: 3.5rem; color: var(--indigo); }
+.brand small { font-family: var(--font-body); font-size: 1rem; color: var(--muted); letter-spacing: 0.08em; margin-left: 0.5rem; }
+.tagline { font-size: 1.25rem; max-width: 30rem; }
+.muted { color: var(--muted); }
+.small { font-size: 0.9rem; }
+
+.spread { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 3rem; align-items: start; }
+.intro { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
+.sample { background: var(--code-bg); color: var(--code-fg); border-radius: var(--radius); overflow: hidden; }
+.sample pre { margin: 0; padding: 1rem 1.25rem; font-family: var(--font-code); font-size: 0.95rem; line-height: var(--line-code); overflow-x: auto; }
+.sample .k { color: var(--code-key); }
+.sample .s { color: var(--code-str); }
+.sample .c { color: var(--code-muted); }
+.sample .out { border-top: 1px solid var(--code-muted); color: var(--code-str); }
+.sample .out::before { content: "नतीजा"; display: block; color: var(--code-muted); font-size: 0.8rem; letter-spacing: 0.08em; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
+.tabs { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line); }
+.tab { background: none; border: 0; border-bottom: 3px solid transparent; padding: 0.5rem 0.25rem 0.6rem; font-family: var(--font-display); font-size: 1.35rem; color: var(--muted); cursor: pointer; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+form { display: flex; flex-direction: column; gap: 1rem; }
+.field { display: flex; flex-direction: column; gap: 0.25rem; }
+.field label { font-family: var(--font-display); font-size: 1.15rem; }
+.field input { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 0.6rem 0.75rem; width: 100%; }
+.gloss { font-size: 0.85rem; color: var(--muted); }
+.btn { background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px; padding: 0.65rem 1.25rem; font-weight: 700; cursor: pointer; }
+.btn:disabled { opacity: 0.55; cursor: progress; }
+.btn.sanskrit { font-family: var(--font-display); font-weight: 400; font-size: 1.2rem; }
+.btn.ghost { background: none; color: var(--ink); border: 1px solid var(--line); font-weight: 500; }
+.msg { min-height: 2.75rem; color: var(--danger); }
+.msg strong { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.1rem; }
+
+.topbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
+.topbar .brand { font-size: 2.5rem; }
+.who { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+.who span { font-family: var(--font-display); font-size: 1.2rem; }
+.stack { display: flex; flex-direction: column; gap: 2.5rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
+.chip { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 0.3rem 0.9rem; cursor: pointer; }
+.chip[aria-pressed="true"] { border-color: var(--indigo); color: var(--indigo); font-weight: 700; }
+.bench { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 1rem; }
+.pane { background: var(--code-bg); color: var(--code-fg); border-radius: var(--radius); display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.pane-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.5rem 0.75rem 0.5rem 1rem; color: var(--code-muted); font-size: 0.85rem; letter-spacing: 0.08em; }
+.editor { display: flex; height: 24rem; font-family: var(--font-code); font-size: 0.95rem; line-height: var(--line-code); }
+.gutter { flex: none; width: 3rem; padding: 0.5rem 0.6rem 0.5rem 0; text-align: right; color: var(--code-muted); white-space: pre; overflow: hidden; user-select: none; }
+#code { flex: 1; min-width: 0; background: transparent; color: var(--code-fg); border: 0; resize: none; padding: 0.5rem 0.75rem 0.5rem 0.25rem; font-family: inherit; font-size: inherit; line-height: inherit; white-space: pre; overflow: auto; tab-size: 4; }
+#code:focus-visible { outline-offset: -3px; }
+#output { margin: 0; flex: 1; height: 24rem; overflow: auto; padding: 0.5rem 1rem 1rem; font-family: var(--font-code); font-size: 0.95rem; line-height: var(--line-code); white-space: pre-wrap; overflow-wrap: anywhere; }
+#output .err { color: var(--danger-on-code); }
+#output .hint { color: var(--code-muted); }
+
+.section-title { font-size: 1.6rem; margin-bottom: 0.75rem; }
+.section-title::before, .section-title::after { content: "॥"; color: var(--accent); margin-inline: 0.4rem; }
+.section-title::before { margin-left: 0; }
+.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 0.45rem 0.75rem 0.45rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; color: var(--muted); }
+td:first-child { font-family: var(--font-code); color: var(--indigo); white-space: nowrap; }
+td:nth-child(2) { font-family: var(--font-code); color: var(--muted); white-space: nowrap; }
+.seal { font-family: var(--font-display); font-size: 1.15rem; line-height: 2; overflow-wrap: anywhere; border-left: 3px solid var(--accent); padding-left: 1rem; margin-block: 0.75rem; }
+.prose { max-width: 40rem; display: flex; flex-direction: column; gap: 0.5rem; }
+
+@media (max-width: 760px) {
+  .spread, .bench, .cols { grid-template-columns: minmax(0, 1fr); }
+  .spread { gap: 2rem; }
+  .brand { font-size: 2.75rem; }
+  .editor, #output { height: 18rem; }
+}
+</style>
+
+<div class="wrap">
+
+  <section id="view-login">
+    <div class="spread">
+      <div class="intro">
+        <h1 class="brand">अक्षर<small>AKSHAR</small></h1>
+        <p class="tagline">हिंदी में कोड लिखो। कीवर्ड हिंदी के हैं, गलती के संदेश हिंदी में आते हैं, और ताला संस्कृत का है।</p>
+        <div class="sample">
+<pre><span class="c"># अक्षर का एक छोटा प्रोग्राम</span>
+<span class="k">मानो</span> उम्र = २०
+<span class="k">अगर</span> उम्र &gt;= 18 {
+    <span class="k">छापो</span> <span class="s">"आप वोट दे सकते हो"</span>
+} <span class="k">वरना</span> {
+    <span class="k">छापो</span> <span class="s">"अभी छोटे हो"</span>
+}</pre>
+<pre class="out">आप वोट दे सकते हो</pre>
+        </div>
+        <p class="muted small">अंदर जाने के बाद आप यहीं ब्राउज़र में कोड चला सकते हो। Roman में लिखना हो तो <span lang="hi-Latn">maano, chhapo, agar</span> भी चलते हैं।</p>
+      </div>
+
+      <div class="card">
+        <div class="tabs" role="tablist">
+          <button class="tab" id="tab-login" role="tab" aria-selected="true" type="button">प्रवेशः</button>
+          <button class="tab" id="tab-register" role="tab" aria-selected="false" type="button">पञ्जीकरणम्</button>
+        </div>
+        <form id="auth-form" autocomplete="off">
+          <div class="field">
+            <label for="auth-name">नाम</label>
+            <input id="auth-name" name="name" type="text" maxlength="40" required>
+            <span class="gloss">आपका नाम</span>
+          </div>
+          <div class="field">
+            <label for="auth-pass">कूटशब्दः</label>
+            <input id="auth-pass" name="pass" type="password" required>
+            <span class="gloss">पासवर्ड, कम से कम 6 अक्षर</span>
+          </div>
+          <button class="btn sanskrit" id="auth-submit" type="submit">प्रविशतु</button>
+          <div class="msg" id="auth-msg" aria-live="polite"></div>
+        </form>
+        <p class="gloss" id="auth-help">पहली बार आए हो? ऊपर "पञ्जीकरणम्" चुनो और खाता बनाओ।</p>
+        <p class="gloss">यह डेमो है। खाते सिर्फ़ इसी ब्राउज़र में रहते हैं, कोई सर्वर नहीं है। पासवर्ड कभी सीधा नहीं रखा जाता, सिर्फ़ उसकी मुद्रा रखी जाती है।</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="view-app" hidden>
+    <div class="topbar">
+      <h1 class="brand">अक्षर<small>AKSHAR</small></h1>
+      <div class="who">
+        <span id="welcome"></span>
+        <button class="btn ghost sanskrit" id="logout" type="button">निर्गमनम्</button>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div>
+        <div class="chips" id="examples"></div>
+        <div class="bench">
+          <div class="pane">
+            <div class="pane-head">
+              <span>कोड</span>
+              <button class="btn" id="run" type="button">चलाओ ▶</button>
+            </div>
+            <div class="editor">
+              <div class="gutter" id="gutter" aria-hidden="true"></div>
+              <textarea id="code" wrap="off" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="अक्षर कोड"></textarea>
+            </div>
+          </div>
+          <div class="pane">
+            <div class="pane-head"><span>नतीजा</span></div>
+            <pre id="output" aria-live="polite"><span class="hint">"चलाओ" दबाओ, नतीजा यहाँ आएगा। Ctrl + Enter भी चलता है।</span></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols">
+        <div>
+          <h2 class="section-title">शब्दकोश</h2>
+          <div class="scroll">
+            <table>
+              <thead><tr><th>हिंदी</th><th>ROMAN</th><th>काम</th></tr></thead>
+              <tbody>
+                <tr><td>मानो</td><td>maano</td><td>नया चर बनाओ</td></tr>
+                <tr><td>छापो</td><td>chhapo</td><td>स्क्रीन पर दिखाओ</td></tr>
+                <tr><td>अगर, वरना</td><td>agar, warna</td><td>शर्त लगाओ</td></tr>
+                <tr><td>जबतक</td><td>jabtak</td><td>जब तक शर्त सही है, दोहराओ</td></tr>
+                <tr><td>काम, लौटाओ</td><td>kaam, lautao</td><td>अपना फ़ंक्शन बनाओ और नतीजा लौटाओ</td></tr>
+                <tr><td>सही, गलत, खाली</td><td>sahi, galat, khaali</td><td>true, false, null</td></tr>
+                <tr><td>और, या, नहीं</td><td>aur, ya, nahi</td><td>and, or, not</td></tr>
+                <tr><td>लंबाई(x)</td><td>lambai</td><td>पाठ या सूची की लंबाई</td></tr>
+                <tr><td>जोड़ो(सूची, x)</td><td>jodo</td><td>सूची के अंत में जोड़ो</td></tr>
+                <tr><td>संख्या(x), पाठ(x)</td><td>sankhya, paath</td><td>एक रूप से दूसरे में बदलो</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <h2 class="section-title">संस्कृत ताला</h2>
+          <div class="scroll">
+            <table>
+              <thead><tr><th>संस्कृत</th><th>ROMAN</th><th>काम</th></tr></thead>
+              <tbody>
+                <tr><td>गोपय(संदेश, कुंजी)</td><td>gopay</td><td>"छिपाओ"। AES-256-GCM से संदेश बंद करता है</td></tr>
+                <tr><td>प्रकाशय(गुप्त, कुंजी)</td><td>prakashay</td><td>"प्रकट करो"। सही कुंजी से वापस खोलता है</td></tr>
+                <tr><td>मुद्रय(पाठ)</td><td>mudray</td><td>"मुहर लगाओ"। SHA-256 की मुद्रा देता है</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="prose" style="margin-top:1.25rem">
+            <p class="small muted">बंद किया हुआ संदेश देवनागरी अक्षरों में दिखता है। हर बाइट एक अक्षर बनता है: 16 व्यंजन ऊपर के चार बिट बताते हैं और 16 मात्राएँ नीचे के चार।</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="section-title">तव कूटशब्दस्य मुद्रा</h2>
+        <div class="prose">
+          <p>यह आपके पासवर्ड की मुहर है। ब्राउज़र में सिर्फ़ यही रखी गई है, पासवर्ड नहीं।</p>
+          <p class="seal" id="seal"></p>
+          <p class="small muted">PBKDF2-SHA256, <span id="iters"></span> चक्र, हर खाते का अपना नमक। इस मुहर से पासवर्ड वापस नहीं निकाला जा सकता।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+/*AKSHAR-CORE-START*/
+const Akshar = (() => {
+  const MAX_STEPS = 200000;
+  const MAX_CALL_DEPTH = 300;
+  const PBKDF2_ITERATIONS = 150000;
+  const SALT_BYTES = 16;
+  const IV_BYTES = 12;
+  const KEY_BITS = 256;
+  const NIBBLE_BITS = 4;
+  const NIBBLE_MASK = 15;
+  const AKSHAR_GROUP = 4;
+  const DEV_ZERO = 0x966;
+
+  const nfc = (s) => s.normalize('NFC');
+  const toDev = (n) => String(n).replace(/[0-9]/g, (d) => String.fromCharCode(DEV_ZERO + Number(d)));
+
+  class AksharError extends Error {
+    constructor(msg, line) { super(line ? `पंक्ति ${toDev(line)}: ${msg}` : msg); this.name = 'AksharError'; }
+  }
+  class ReturnSignal { constructor(value) { this.value = value; } }
+
+  const KEYWORD_LIST = [
+    ['मानो', 'maano', 'LET'], ['छापो', 'chhapo', 'PRINT'], ['अगर', 'agar', 'IF'], ['वरना', 'warna', 'ELSE'],
+    ['जबतक', 'jabtak', 'WHILE'], ['काम', 'kaam', 'FUNC'], ['लौटाओ', 'lautao', 'RETURN'],
+    ['सही', 'sahi', 'TRUE'], ['गलत', 'galat', 'FALSE'], ['खाली', 'khaali', 'NULL'],
+    ['और', 'aur', 'AND'], ['या', 'ya', 'OR'], ['नहीं', 'nahi', 'NOT'],
+  ];
+  const KEYWORDS = new Map();
+  for (const [hi, roman, kind] of KEYWORD_LIST) { KEYWORDS.set(nfc(hi), kind); KEYWORDS.set(roman, kind); }
+
+  const TWO_CHAR_OPS = ['==', '!=', '<=', '>='];
+  const ONE_CHAR_OPS = '+-*/%<>=(){}[],';
+  const SKIP_CHARS = ' \t\r;।‌‍';
+  const ESCAPES = { n: '\n', t: '\t', '"': '"', "'": "'", '\\': '\\' };
+
+  function lex(source) {
+    const src = nfc(source);
+    const idRe = /[\p{L}_][\p{L}\p{M}\p{N}_‌‍]*/uy;
+    const numRe = /[0-9०-९]+(?:\.[0-9०-९]+)?/y;
+    const toks = [];
+    let i = 0, line = 1;
+    while (i < src.length) {
+      const c = src[i];
+      if (c === '\n') { line++; i++; continue; }
+      if (SKIP_CHARS.includes(c)) { i++; continue; }
+      if (c === '#') { while (i < src.length && src[i] !== '\n') i++; continue; }
+      if (c === '"' || c === "'") {
+        let j = i + 1, text = '';
+        while (j < src.length && src[j] !== c && src[j] !== '\n') {
+          if (src[j] === '\\' && j + 1 < src.length) {
+            const e = src[j + 1];
+            text += e in ESCAPES ? ESCAPES[e] : e;
+            j += 2;
+          } else { text += src[j]; j++; }
+        }
+        if (src[j] !== c) throw new AksharError('पाठ का उद्धरण चिह्न बंद नहीं हुआ', line);
+        toks.push({ type: 'str', value: text, line });
+        i = j + 1;
+        continue;
+      }
+      numRe.lastIndex = i;
+      const nm = numRe.exec(src);
+      if (nm) {
+        const ascii = nm[0].replace(/[०-९]/g, (d) => d.charCodeAt(0) - DEV_ZERO);
+        toks.push({ type: 'num', value: parseFloat(ascii), line });
+        i = numRe.lastIndex;
+        continue;
+      }
+      idRe.lastIndex = i;
+      const im = idRe.exec(src);
+      if (im) {
+        const word = im[0];
+        if (KEYWORDS.has(word)) toks.push({ type: 'kw', value: KEYWORDS.get(word), text: word, line });
+        else toks.push({ type: 'id', value: word, text: word, line });
+        i = idRe.lastIndex;
+        continue;
+      }
+      const two = src.slice(i, i + 2);
+      if (TWO_CHAR_OPS.includes(two)) { toks.push({ type: 'op', value: two, text: two, line }); i += 2; continue; }
+      if (ONE_CHAR_OPS.includes(c)) { toks.push({ type: 'op', value: c, text: c, line }); i++; continue; }
+      throw new AksharError(`अनजान चिह्न '${c}'`, line);
+    }
+    toks.push({ type: 'eof', value: null, text: 'प्रोग्राम का अंत', line });
+    return toks;
+  }
+
+  function parse(toks) {
+    let p = 0;
+    const cur = () => toks[p];
+    const at = (type, value) => toks[p].type === type && (value === undefined || toks[p].value === value);
+    const shown = (t) => (t.type === 'str' ? `"${t.value}"` : t.type === 'num' ? String(t.value) : t.text);
+    const expect = (type, value, what) => {
+      if (!at(type, value)) throw new AksharError(`यहाँ ${what} चाहिए था, पर '${shown(cur())}' मिला`, cur().line);
+      return toks[p++];
+    };
+
+    function block() {
+      expect('op', '{', "'{'");
+      const body = [];
+      while (!at('op', '}')) {
+        if (at('eof')) throw new AksharError("'}' से खंड बंद नहीं हुआ", cur().line);
+        body.push(statement());
+      }
+      p++;
+      return body;
+    }
+
+    function statement() {
+      const t = cur();
+      if (t.type === 'kw') {
+        if (t.value === 'LET') {
+          p++;
+          const name = expect('id', undefined, 'चर का नाम').value;
+          expect('op', '=', "'='");
+          return { t: 'let', name, e: expr(), line: t.line };
+        }
+        if (t.value === 'PRINT') {
+          p++;
+          const args = [expr()];
+          while (at('op', ',')) { p++; args.push(expr()); }
+          return { t: 'print', args, line: t.line };
+        }
+        if (t.value === 'IF') {
+          p++;
+          const cond = expr();
+          const then = block();
+          let otherwise = null;
+          if (at('kw', 'ELSE')) {
+            p++;
+            otherwise = at('kw', 'IF') ? [statement()] : block();
+          }
+          return { t: 'if', cond, then, otherwise, line: t.line };
+        }
+        if (t.value === 'WHILE') {
+          p++;
+          const cond = expr();
+          return { t: 'while', cond, body: block(), line: t.line };
+        }
+        if (t.value === 'FUNC') {
+          p++;
+          const name = expect('id', undefined, 'काम का नाम').value;
+          expect('op', '(', "'('");
+          const params = [];
+          if (!at('op', ')')) {
+            params.push(expect('id', undefined, 'नाम').value);
+            while (at('op', ',')) { p++; params.push(expect('id', undefined, 'नाम').value); }
+          }
+          expect('op', ')', "')'");
+          return { t: 'func', name, params, body: block(), line: t.line };
+        }
+        if (t.value === 'RETURN') {
+          p++;
+          const bare = at('op', '}') || at('eof') || cur().line !== t.line;
+          return { t: 'return', e: bare ? null : expr(), line: t.line };
+        }
+        if (t.value === 'ELSE') throw new AksharError("'वरना' से पहले 'अगर' चाहिए", t.line);
+      }
+      const e = expr();
+      if (at('op', '=')) {
+        if (e.t !== 'var' && e.t !== 'idx') throw new AksharError("'=' के बाएँ चर का नाम चाहिए", cur().line);
+        p++;
+        return { t: 'assign', target: e, e: expr(), line: t.line };
+      }
+      return { t: 'expr', e, line: t.line };
+    }
+
+    function binaryLevel(nextLevel, ops) {
+      return function level() {
+        let left = nextLevel();
+        while (at('op') && ops.includes(cur().value)) {
+          const op = toks[p++];
+          left = { t: 'bin', op: op.value, l: left, r: nextLevel(), line: op.line };
+        }
+        return left;
+      };
+    }
+
+    function primary() {
+      const t = toks[p++];
+      if (t.type === 'num' || t.type === 'str') return { t: 'lit', v: t.value, line: t.line };
+      if (t.type === 'kw' && t.value === 'TRUE') return { t: 'lit', v: true, line: t.line };
+      if (t.type === 'kw' && t.value === 'FALSE') return { t: 'lit', v: false, line: t.line };
+      if (t.type === 'kw' && t.value === 'NULL') return { t: 'lit', v: null, line: t.line };
+      if (t.type === 'id') return { t: 'var', name: t.value, line: t.line };
+      if (t.type === 'op' && t.value === '(') {
+        const e = expr();
+        expect('op', ')', "')'");
+        return e;
+      }
+      if (t.type === 'op' && t.value === '[') {
+        const items = [];
+        if (!at('op', ']')) {
+          items.push(expr());
+          while (at('op', ',')) { p++; items.push(expr()); }
+        }
+        expect('op', ']', "']'");
+        return { t: 'list', items, line: t.line };
+      }
+      p--;
+      throw new AksharError(`'${shown(t)}' यहाँ समझ नहीं आया`, t.line);
+    }
+
+    function postfix() {
+      let e = primary();
+      while ((at('op', '(') || at('op', '[')) && cur().line === toks[p - 1].line) {
+        const open = toks[p++];
+        if (open.value === '(') {
+          const args = [];
+          if (!at('op', ')')) {
+            args.push(expr());
+            while (at('op', ',')) { p++; args.push(expr()); }
+          }
+          expect('op', ')', "')'");
+          e = { t: 'call', fn: e, args, line: open.line };
+        } else {
+          const index = expr();
+          expect('op', ']', "']'");
+          e = { t: 'idx', target: e, index, line: open.line };
+        }
+      }
+      return e;
+    }
+
+    function unary() {
+      if (at('op', '-')) { const t = toks[p++]; return { t: 'neg', e: unary(), line: t.line }; }
+      return postfix();
+    }
+    const product = binaryLevel(unary, ['*', '/', '%']);
+    const sum = binaryLevel(product, ['+', '-']);
+    const comparison = binaryLevel(sum, ['==', '!=', '<', '>', '<=', '>=']);
+    function negation() {
+      if (at('kw', 'NOT')) { const t = toks[p++]; return { t: 'not', e: negation(), line: t.line }; }
+      return comparison();
+    }
+    function conjunction() {
+      let left = negation();
+      while (at('kw', 'AND')) { const t = toks[p++]; left = { t: 'and', l: left, r: negation(), line: t.line }; }
+      return left;
+    }
+    function expr() {
+      let left = conjunction();
+      while (at('kw', 'OR')) { const t = toks[p++]; left = { t: 'or', l: left, r: conjunction(), line: t.line }; }
+      return left;
+    }
+
+    const program = [];
+    while (!at('eof')) {
+      if (at('op', '}')) throw new AksharError("यह '}' किसी खंड का नहीं है", cur().line);
+      program.push(statement());
+    }
+    return program;
+  }
+
+  class Env {
+    constructor(parent) { this.vars = new Map(); this.parent = parent || null; }
+    find(name) { for (let e = this; e; e = e.parent) if (e.vars.has(name)) return e; return null; }
+    get(name, line) {
+      const e = this.find(name);
+      if (!e) throw new AksharError(`'${name}' नाम की कोई चीज़ नहीं मिली`, line);
+      return e.vars.get(name);
+    }
+    define(name, value) { this.vars.set(name, value); }
+    assign(name, value, line) {
+      const e = this.find(name);
+      if (!e) throw new AksharError(`'${name}' को पहले 'मानो' से बनाओ`, line);
+      e.vars.set(name, value);
+    }
+  }
+
+  const isFn = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
+  const truthy = (v) => !(v === false || v === null || v === 0 || v === '');
+  function typeName(v) {
+    if (v === null) return 'खाली';
+    if (typeof v === 'number') return 'संख्या';
+    if (typeof v === 'string') return 'पाठ';
+    if (typeof v === 'boolean') return 'सही/गलत';
+    if (Array.isArray(v)) return 'सूची';
+    return 'काम';
+  }
+  function show(v, nested) {
+    if (v === null) return 'खाली';
+    if (v === true) return 'सही';
+    if (v === false) return 'गलत';
+    if (typeof v === 'number') return String(Number.isInteger(v) ? v : parseFloat(v.toFixed(10)));
+    if (typeof v === 'string') return nested ? `"${v}"` : v;
+    if (Array.isArray(v)) return '[' + v.map((x) => show(x, true)).join(', ') + ']';
+    return `<काम ${v.name}>`;
+  }
+  function equal(a, b) {
+    if (Array.isArray(a) && Array.isArray(b)) return a.length === b.length && a.every((x, i) => equal(x, b[i]));
+    return a === b;
+  }
+  function graphemes(s) {
+    if (typeof Intl !== 'undefined' && Intl.Segmenter) return [...new Intl.Segmenter('hi', { granularity: 'grapheme' }).segment(s)].length;
+    return [...s].length;
+  }
+
+  const CONSONANTS = [...'कखगघचजटडतदनपबमरस'];
+  const MARKS = ['', 'ा', 'ि', 'ी', 'ु', 'ू', 'ृ', 'े', 'ै', 'ो', 'ौ', 'ं', 'ः', 'ँ', 'ॅ', '्'];
+
+  function toAkshar(bytes) {
+    const out = [];
+    bytes.forEach((b, i) => {
+      if (i > 0 && i % AKSHAR_GROUP === 0) out.push(' ');
+      out.push(CONSONANTS[b >> NIBBLE_BITS] + MARKS[b & NIBBLE_MASK]);
+    });
+    return out.join('');
+  }
+  function fromAkshar(text) {
+    const chars = [...nfc(text)];
+    const bytes = [];
+    for (let i = 0; i < chars.length; i++) {
+      if (/\s/.test(chars[i])) continue;
+      const high = CONSONANTS.indexOf(chars[i]);
+      if (high < 0) throw new Error('यह अक्षर-कूट नहीं है');
+      let low = 0;
+      const mark = MARKS.indexOf(chars[i + 1]);
+      if (mark > 0) { low = mark; i++; }
+      bytes.push((high << NIBBLE_BITS) | low);
+    }
+    return Uint8Array.from(bytes);
+  }
+
+  const encoder = new TextEncoder();
+  const decoder = new TextDecoder();
+  function subtle() {
+    const c = globalThis.crypto;
+    if (!c || !c.subtle) throw new Error('इस ब्राउज़र में गूढलेखन उपलब्ध नहीं है');
+    return c.subtle;
+  }
+  const randomBytes = (n) => globalThis.crypto.getRandomValues(new Uint8Array(n));
+  const pbkdf2 = (salt) => ({ name: 'PBKDF2', salt, iterations: PBKDF2_ITERATIONS, hash: 'SHA-256' });
+  const baseKey = (secret, usage) => subtle().importKey('raw', encoder.encode(secret), 'PBKDF2', false, [usage]);
+
+  async function aesKey(secret, salt) {
+    return subtle().deriveKey(pbkdf2(salt), await baseKey(secret, 'deriveKey'), { name: 'AES-GCM', length: KEY_BITS }, false, ['encrypt', 'decrypt']);
+  }
+  async function gopay(message, secret) {
+    const salt = randomBytes(SALT_BYTES);
+    const iv = randomBytes(IV_BYTES);
+    const key = await aesKey(secret, salt);
+    const sealed = new Uint8Array(await subtle().encrypt({ name: 'AES-GCM', iv }, key, encoder.encode(message)));
+    const all = new Uint8Array(SALT_BYTES + IV_BYTES + sealed.length);
+    all.set(salt);
+    all.set(iv, SALT_BYTES);
+    all.set(sealed, SALT_BYTES + IV_BYTES);
+    return toAkshar(all);
+  }
+  async function prakashay(cipher, secret) {
+    const all = fromAkshar(cipher);
+    if (all.length <= SALT_BYTES + IV_BYTES) throw new Error('यह गुप्त संदेश अधूरा है');
+    const salt = all.slice(0, SALT_BYTES);
+    const iv = all.slice(SALT_BYTES, SALT_BYTES + IV_BYTES);
+    const key = await aesKey(secret, salt);
+    try {
+      return decoder.decode(await subtle().decrypt({ name: 'AES-GCM', iv }, key, all.slice(SALT_BYTES + IV_BYTES)));
+    } catch (e) {
+      throw new Error('कुंजी गलत है या संदेश बदला गया है');
+    }
+  }
+  async function mudray(text) {
+    return toAkshar(new Uint8Array(await subtle().digest('SHA-256', encoder.encode(text))));
+  }
+  async function seal(password, saltText) {
+    const salt = saltText ? fromAkshar(saltText) : randomBytes(SALT_BYTES);
+    const bits = await subtle().deriveBits(pbkdf2(salt), await baseKey(password, 'deriveBits'), KEY_BITS);
+    return { salt: toAkshar(salt), seal: toAkshar(new Uint8Array(bits)) };
+  }
+
+  function need(args, count, name) {
+    if (args.length !== count) throw new Error(`'${name}' को ${toDev(count)} चीज़ें चाहिए, ${toDev(args.length)} मिलीं`);
+  }
+  function needText(v, name) {
+    if (typeof v !== 'string') throw new Error(`'${name}' को पाठ चाहिए, ${typeName(v)} मिला`);
+  }
+  const BUILTIN_LIST = [
+    ['लंबाई', 'lambai', (a, n) => {
+      need(a, 1, n);
+      if (typeof a[0] === 'string') return graphemes(a[0]);
+      if (Array.isArray(a[0])) return a[0].length;
+      throw new Error(`'${n}' सिर्फ़ पाठ या सूची पर चलता है`);
+    }],
+    ['जोड़ो', 'jodo', (a, n) => {
+      need(a, 2, n);
+      if (!Array.isArray(a[0])) throw new Error(`'${n}' की पहली चीज़ सूची होनी चाहिए`);
+      a[0].push(a[1]);
+      return a[0];
+    }],
+    ['संख्या', 'sankhya', (a, n) => {
+      need(a, 1, n);
+      const text = show(a[0]).replace(/[०-९]/g, (d) => d.charCodeAt(0) - DEV_ZERO);
+      const value = Number(text);
+      if (text.trim() === '' || Number.isNaN(value)) throw new Error(`"${show(a[0])}" संख्या नहीं है`);
+      return value;
+    }],
+    ['पाठ', 'paath', (a, n) => { need(a, 1, n); return show(a[0]); }],
+    ['गोपय', 'gopay', (a, n) => { need(a, 2, n); needText(a[0], n); needText(a[1], n); return gopay(a[0], a[1]); }],
+    ['प्रकाशय', 'prakashay', (a, n) => { need(a, 2, n); needText(a[0], n); needText(a[1], n); return prakashay(a[0], a[1]); }],
+    ['मुद्रय', 'mudray', (a, n) => { need(a, 1, n); needText(a[0], n); return mudray(a[0]); }],
+  ];
+
+  async function run(source, print) {
+    const program = parse(lex(source));
+    const globals = new Env();
+    for (const [hi, roman, impl] of BUILTIN_LIST) {
+      const fn = { name: hi, builtin: impl };
+      globals.define(nfc(hi), fn);
+      globals.define(roman, fn);
+    }
+    let steps = 0;
+    let depth = 0;
+    const tick = (line) => {
+      if (++steps > MAX_STEPS) throw new AksharError('प्रोग्राम बहुत देर से चल रहा है। कहीं चक्र अनंत तो नहीं?', line);
+    };
+    const number = (v, line) => {
+      if (typeof v !== 'number') throw new AksharError(`यहाँ संख्या चाहिए थी, ${typeName(v)} मिला`, line);
+      return v;
+    };
+
+    async function execBlock(body, env) {
+      for (const s of body) await exec(s, env);
+    }
+
+    async function exec(s, env) {
+      tick(s.line);
+      switch (s.t) {
+        case 'let': env.define(s.name, await ev(s.e, env)); return;
+        case 'assign': {
+          const value = await ev(s.e, env);
+          if (s.target.t === 'var') { env.assign(s.target.name, value, s.line); return; }
+          const list = await ev(s.target.target, env);
+          if (!Array.isArray(list)) throw new AksharError('सिर्फ़ सूची के खाने बदले जा सकते हैं', s.line);
+          list[position(await ev(s.target.index, env), list.length, s.line)] = value;
+          return;
+        }
+        case 'print': {
+          const parts = [];
+          for (const a of s.args) parts.push(show(await ev(a, env)));
+          print(parts.join(' '));
+          return;
+        }
+        case 'if':
+          if (truthy(await ev(s.cond, env))) await execBlock(s.then, new Env(env));
+          else if (s.otherwise) await execBlock(s.otherwise, new Env(env));
+          return;
+        case 'while':
+          while (truthy(await ev(s.cond, env))) { tick(s.line); await execBlock(s.body, new Env(env)); }
+          return;
+        case 'func': env.define(s.name, { name: s.name, params: s.params, body: s.body, closure: env }); return;
+        case 'return': throw new ReturnSignal(s.e ? await ev(s.e, env) : null);
+        default: await ev(s.e, env);
+      }
+    }
+
+    function position(index, length, line) {
+      if (!Number.isInteger(index)) throw new AksharError('खाने का क्रमांक पूरी संख्या होना चाहिए', line);
+      if (index < 0 || index >= length) throw new AksharError(`क्रमांक ${toDev(index)} सीमा से बाहर है (लंबाई ${toDev(length)})`, line);
+      return index;
+    }
+
+    async function ev(n, env) {
+      switch (n.t) {
+        case 'lit': return n.v;
+        case 'var': return env.get(n.name, n.line);
+        case 'list': {
+          const items = [];
+          for (const e of n.items) items.push(await ev(e, env));
+          return items;
+        }
+        case 'neg': return -number(await ev(n.e, env), n.line);
+        case 'not': return !truthy(await ev(n.e, env));
+        case 'and': { const l = await ev(n.l, env); return truthy(l) ? ev(n.r, env) : l; }
+        case 'or': { const l = await ev(n.l, env); return truthy(l) ? l : ev(n.r, env); }
+        case 'bin': return binary(n.op, await ev(n.l, env), await ev(n.r, env), n.line);
+        case 'idx': {
+          const target = await ev(n.target, env);
+          const index = await ev(n.index, env);
+          if (Array.isArray(target)) return target[position(index, target.length, n.line)];
+          if (typeof target === 'string') { const chars = [...target]; return chars[position(index, chars.length, n.line)]; }
+          throw new AksharError(`${typeName(target)} में से खाना नहीं निकाला जा सकता`, n.line);
+        }
+        case 'call': {
+          const fn = await ev(n.fn, env);
+          if (!isFn(fn)) throw new AksharError(`${typeName(fn)} को काम की तरह नहीं चलाया जा सकता`, n.line);
+          const args = [];
+          for (const a of n.args) args.push(await ev(a, env));
+          if (fn.builtin) {
+            try { return await fn.builtin(args, fn.name); }
+            catch (e) { throw e instanceof AksharError ? e : new AksharError(e.message, n.line); }
+          }
+          if (args.length !== fn.params.length) {
+            throw new AksharError(`'${fn.name}' को ${toDev(fn.params.length)} चीज़ें चाहिए, ${toDev(args.length)} मिलीं`, n.line);
+          }
+          if (++depth > MAX_CALL_DEPTH) throw new AksharError('काम अपने आप को बहुत गहराई तक बुला रहा है', n.line);
+          const local = new Env(fn.closure);
+          fn.params.forEach((name, i) => local.define(name, args[i]));
+          try { await execBlock(fn.body, local); return null; }
+          catch (e) { if (e instanceof ReturnSignal) return e.value; throw e; }
+          finally { depth--; }
+        }
+      }
+      throw new AksharError('यह हिस्सा समझ नहीं आया', n.line);
+    }
+
+    function binary(op, l, r, line) {
+      if (op === '==') return equal(l, r);
+      if (op === '!=') return !equal(l, r);
+      if (op === '+') {
+        if (typeof l === 'number' && typeof r === 'number') return l + r;
+        if (typeof l === 'string' || typeof r === 'string') return show(l) + show(r);
+        if (Array.isArray(l) && Array.isArray(r)) return l.concat(r);
+        throw new AksharError(`${typeName(l)} और ${typeName(r)} को जोड़ा नहीं जा सकता`, line);
+      }
+      if (op === '<' || op === '>' || op === '<=' || op === '>=') {
+        const comparable = (typeof l === 'number' && typeof r === 'number') || (typeof l === 'string' && typeof r === 'string');
+        if (!comparable) throw new AksharError(`${typeName(l)} और ${typeName(r)} की तुलना नहीं हो सकती`, line);
+        if (op === '<') return l < r;
+        if (op === '>') return l > r;
+        return op === '<=' ? l <= r : l >= r;
+      }
+      number(l, line);
+      number(r, line);
+      if (op === '-') return l - r;
+      if (op === '*') return l * r;
+      if (r === 0) throw new AksharError('शून्य से भाग नहीं हो सकता', line);
+      return op === '/' ? l / r : l % r;
+    }
+
+    try { await execBlock(program, globals); }
+    catch (e) {
+      if (e instanceof ReturnSignal) throw new AksharError("'लौटाओ' सिर्फ़ काम के अंदर चलता है");
+      throw e;
+    }
+  }
+
+  const EXAMPLES = [
+    { title: 'नमस्ते दुनिया', code: `# अक्षर में पहला प्रोग्राम
+मानो नाम = "दुनिया"
+छापो "नमस्ते, " + नाम + "!"
+
+मानो उम्र = २०
+अगर उम्र >= 18 {
+    छापो "आप वोट दे सकते हो"
+} वरना {
+    छापो "अभी छोटे हो"
+}
+` },
+    { title: 'चक्र और काम', code: `# जबतक से गिनती, काम से फ़ैक्टोरियल
+काम गुणनफल(न) {
+    अगर न <= 1 { लौटाओ 1 }
+    लौटाओ न * गुणनफल(न - 1)
+}
+
+मानो गिनती = 1
+जबतक गिनती <= 5 {
+    छापो गिनती, "का फ़ैक्टोरियल =", गुणनफल(गिनती)
+    गिनती = गिनती + 1
+}
+` },
+    { title: 'गुप्त संदेश', code: `# गोपय, प्रकाशय और मुद्रय संस्कृत के शब्द हैं
+मानो संदेश = "कल सुबह छह बजे मिलो"
+मानो कुंजी = "सत्यमेव जयते"
+
+मानो गुप्त = गोपय(संदेश, कुंजी)
+छापो "गुप्त रूप:"
+छापो गुप्त
+
+छापो "वापस खोला:"
+छापो प्रकाशय(गुप्त, कुंजी)
+
+छापो "संदेश की मुद्रा:"
+छापो मुद्रय(संदेश)
+` },
+    { title: 'Roman Hinglish', code: `# Roman mein bhi wahi bhasha chalti hai
+maano ank = [3, 8, 5]
+maano jod = 0
+maano i = 0
+jabtak i < lambai(ank) {
+    jod = jod + ank[i]
+    i = i + 1
+}
+chhapo "Jod hai:", jod
+
+agar jod > 10 aur nahi (jod == 15) {
+    chhapo "Das se bada"
+} warna {
+    chhapo "Chhota hai"
+}
+` },
+  ];
+
+  return { run, seal, toDev, AksharError, EXAMPLES, PBKDF2_ITERATIONS };
+})();
+/*AKSHAR-CORE-END*/
+</script>
+
+<script>
+(() => {
+  const USERS_KEY = 'akshar.users';
+  const SESSION_KEY = 'akshar.session';
+  const MIN_PASSWORD_LENGTH = 6;
+  const TAB_SPACES = '    ';
+  const $ = (id) => document.getElementById(id);
+
+  function read(storage, key) {
+    try { return JSON.parse(window[storage].getItem(key)); } catch (e) { return null; }
+  }
+  function write(storage, key, value) {
+    try {
+      if (value === null) window[storage].removeItem(key);
+      else window[storage].setItem(key, JSON.stringify(value));
+    } catch (e) { /* storage blocked: the page still works for this visit */ }
+  }
+
+  const users = read('localStorage', USERS_KEY) || {};
+  const keyOf = (name) => name.normalize('NFC').trim().toLowerCase();
+  let mode = 'login';
+
+  const MESSAGES = {
+    nameNeeded: ['नाम आवश्यकम्', 'नाम भरना ज़रूरी है।'],
+    shortPass: ['कूटशब्दे न्यूनातिन्यूनं षड् अक्षराणि आवश्यकानि', 'पासवर्ड में कम से कम 6 अक्षर रखो।'],
+    taken: ['एतत् नाम पूर्वमेव अस्ति', 'यह नाम पहले से है। "प्रवेशः" से अंदर जाओ या दूसरा नाम चुनो।'],
+    unknown: ['एतत् नाम न विद्यते', 'यह नाम नहीं मिला। पहले "पञ्जीकरणम्" से खाता बनाओ।'],
+    wrongPass: ['कूटशब्दः अशुद्धः', 'पासवर्ड गलत है। दोबारा लिखो।'],
+    noCrypto: ['गूढलेखनं न उपलब्धम्', 'इस ब्राउज़र में एन्क्रिप्शन नहीं चल रहा।'],
+  };
+  function showMessage(key) {
+    const box = $('auth-msg');
+    box.textContent = '';
+    if (!key) return;
+    const strong = document.createElement('strong');
+    strong.textContent = MESSAGES[key][0];
+    const gloss = document.createElement('span');
+    gloss.className = 'gloss';
+    gloss.textContent = MESSAGES[key][1];
+    box.append(strong, gloss);
+  }
+
+  function setMode(next) {
+    mode = next;
+    $('tab-login').setAttribute('aria-selected', String(mode === 'login'));
+    $('tab-register').setAttribute('aria-selected', String(mode === 'register'));
+    $('auth-submit').textContent = mode === 'login' ? 'प्रविशतु' : 'पञ्जीकरणं करोतु';
+    $('auth-help').textContent = mode === 'login'
+      ? 'पहली बार आए हो? ऊपर "पञ्जीकरणम्" चुनो और खाता बनाओ।'
+      : 'खाता बनते ही आप सीधे अंदर पहुँच जाओगे।';
+    showMessage(null);
+  }
+  $('tab-login').addEventListener('click', () => setMode('login'));
+  $('tab-register').addEventListener('click', () => setMode('register'));
+
+  $('auth-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const name = $('auth-name').value.normalize('NFC').trim();
+    const password = $('auth-pass').value;
+    const key = keyOf(name);
+    if (!key) return showMessage('nameNeeded');
+    if (mode === 'register') {
+      if (password.length < MIN_PASSWORD_LENGTH) return showMessage('shortPass');
+      if (users[key]) return showMessage('taken');
+    } else if (!users[key]) {
+      return showMessage('unknown');
+    }
+    const button = $('auth-submit');
+    button.disabled = true;
+    try {
+      if (mode === 'register') {
+        const sealed = await Akshar.seal(password);
+        users[key] = { name, salt: sealed.salt, seal: sealed.seal };
+        write('localStorage', USERS_KEY, users);
+      } else {
+        const sealed = await Akshar.seal(password, users[key].salt);
+        if (sealed.seal !== users[key].seal) return showMessage('wrongPass');
+      }
+      $('auth-pass').value = '';
+      enter(key);
+    } catch (e) {
+      showMessage('noCrypto');
+    } finally {
+      button.disabled = false;
+    }
+  });
+
+  function enter(key) {
+    const user = users[key];
+    write('sessionStorage', SESSION_KEY, key);
+    $('welcome').textContent = `स्वागतम्, ${user.name}`;
+    $('seal').textContent = user.seal;
+    $('iters').textContent = Akshar.PBKDF2_ITERATIONS.toLocaleString('en-IN');
+    $('view-login').hidden = true;
+    $('view-app').hidden = false;
+    refreshGutter();
+  }
+  $('logout').addEventListener('click', () => {
+    write('sessionStorage', SESSION_KEY, null);
+    $('view-app').hidden = true;
+    $('view-login').hidden = false;
+    setMode('login');
+  });
+
+  const code = $('code');
+  const gutter = $('gutter');
+  const output = $('output');
+
+  function refreshGutter() {
+    const lines = code.value.split('\n').length;
+    const numbers = [];
+    for (let n = 1; n <= lines; n++) numbers.push(Akshar.toDev(n));
+    gutter.textContent = numbers.join('\n');
+    gutter.scrollTop = code.scrollTop;
+  }
+  code.addEventListener('input', refreshGutter);
+  code.addEventListener('scroll', () => { gutter.scrollTop = code.scrollTop; });
+  code.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) { event.preventDefault(); runCode(); return; }
+    if (event.key === 'Tab' && !event.shiftKey && !event.ctrlKey && !event.metaKey && !event.altKey) {
+      event.preventDefault();
+      const start = code.selectionStart;
+      code.setRangeText(TAB_SPACES, start, code.selectionEnd, 'end');
+      refreshGutter();
+    }
+  });
+
+  const chips = $('examples');
+  function loadExample(index) {
+    code.value = Akshar.EXAMPLES[index].code;
+    code.scrollTop = 0;
+    [...chips.children].forEach((chip, i) => chip.setAttribute('aria-pressed', String(i === index)));
+    refreshGutter();
+  }
+  Akshar.EXAMPLES.forEach((example, index) => {
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'chip';
+    chip.textContent = example.title;
+    chip.addEventListener('click', () => loadExample(index));
+    chips.append(chip);
+  });
+  loadExample(0);
+
+  function line(text, className) {
+    const row = document.createElement('div');
+    if (className) row.className = className;
+    row.textContent = text === '' ? ' ' : text;
+    output.append(row);
+    output.scrollTop = output.scrollHeight;
+  }
+  let running = false;
+  async function runCode() {
+    if (running) return;
+    running = true;
+    $('run').disabled = true;
+    output.textContent = '';
+    let printed = 0;
+    try {
+      await Akshar.run(code.value, (text) => { printed++; line(text); });
+      if (!printed) line('प्रोग्राम चल गया, पर कुछ छापा नहीं।', 'hint');
+    } catch (e) {
+      line(e instanceof Akshar.AksharError ? `गलती: ${e.message}` : `गलती: ${e.message || e}`, 'err');
+    } finally {
+      running = false;
+      $('run').disabled = false;
+    }
+  }
+  $('run').addEventListener('click', runCode);
+
+  const session = read('sessionStorage', SESSION_KEY);
+  if (session && users[session]) enter(session);
+})();
+</script>
